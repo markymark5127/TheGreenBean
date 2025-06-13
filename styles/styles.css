@@ -113,6 +113,22 @@ nav a {
   min-width: 280px;
 }
 
+/* Specific column ordering for home page */
+.story {
+  order: 1;
+  flex-basis: 100%;
+}
+
+.products {
+  order: 2;
+  flex-basis: 50%;
+}
+
+.roasting {
+  order: 3;
+  flex-basis: 50%;
+}
+
 .column h2 {
   font-size: 1.5em;
   margin-bottom: 1em;
@@ -214,7 +230,7 @@ nav a {
 }
 
 .coffee-bag-img {
-  height: 180px;
+  height: 220px;
   border-radius: 4px;
   display: block;
   margin-bottom: 1em;
@@ -545,8 +561,25 @@ form button {
 }
 
 .cart-modal li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #eee;
   padding: 0.5em 0;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1b3c2b;
+  padding: 0;
+}
+
+.remove-btn .trash-icon {
+  width: 1em;
+  height: 1em;
+  pointer-events: none;
 }
 
 .cart-close {

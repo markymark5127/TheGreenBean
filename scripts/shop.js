@@ -24,14 +24,22 @@ function showCart() {
 
   list.innerHTML = '';
   let sum = 0;
-  cart.forEach((item) => {
+  cart.forEach((item, idx) => {
     sum += item.price;
     const li = document.createElement('li');
     const details = [];
     if (item.color) details.push(item.color);
     if (item.size) details.push(item.size);
     const info = details.length ? ` (${details.join(' ')})` : '';
-    li.textContent = `${item.name}${info} - $${item.price.toFixed(2)}`;
+    const span = document.createElement('span');
+    span.textContent = `${item.name}${info} - $${item.price.toFixed(2)}`;
+    const btn = document.createElement('button');
+    btn.className = 'remove-btn';
+    btn.innerHTML =
+      '<svg class="trash-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M9 6v12m6-12v12M4 6l1-3h14l1 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    btn.addEventListener('click', () => removeFromCart(idx));
+    li.appendChild(span);
+    li.appendChild(btn);
     list.appendChild(li);
   });
 
@@ -44,6 +52,13 @@ function showCart() {
 
 function closeCart() {
   document.getElementById('cart-modal').classList.remove('open');
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
+  showCart();
 }
 
 updateCartCount();
