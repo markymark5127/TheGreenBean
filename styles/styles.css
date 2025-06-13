@@ -136,6 +136,7 @@ nav a {
 
 .roaster-info {
   flex: 1;
+  text-align: right;
 }
 
 .column h2 {
@@ -162,7 +163,7 @@ nav a {
 }
 
 .roaster-container .roaster-img {
-  margin-left: auto;
+  margin-left: 0;
 }
 
 
