@@ -1,14 +1,13 @@
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav');
-
-if (hamburger && navMenu) {
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
-}
-
-// Load specials from external text file
 document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  }
+
   const specialsTitle = document.getElementById('specials-title');
   const specialsList = document.getElementById('specials-list');
 
