@@ -291,6 +291,12 @@ nav a {
   font-weight: 500;
 }
 
+/* Specials list has no price columns */
+.specials-section li {
+  display: block;
+  padding: 8px 0;
+}
+
 /* Align menu item columns with the size labels */
 .menu-section li span:first-child {
   flex: 2;
@@ -733,4 +739,12 @@ form button {
 
 #paypal-form {
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .menu-section-header h2,
+  .size-labels span,
+  .menu-section li span {
+    font-size: 0.9rem;
+  }
 }
