@@ -28,22 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (specialsTitle && specialsList) {
     // Fetch the specials list from the assets folder
-    fetch('./assets/specials.txt')
+    fetch('./assets/specials.json')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.text();
+        return response.json();
       })
-      .then((text) => {
-        const lines = text.trim().split('\n');
-        if (lines.length > 0) {
-          specialsTitle.textContent = lines[0];
-          lines.slice(1).forEach((line) => {
-            const li = document.createElement('li');
-            li.textContent = line;
-            specialsList.appendChild(li);
-          });
+      .then((data) => {
+        if (data && data.title) {
+          specialsTitle.textContent = data.title;
+          if (Array.isArray(data.items)) {
+            data.items.forEach((item) => {
+              const li = document.createElement('li');
+              li.textContent = item;
+              specialsList.appendChild(li);
+            });
+          }
         }
       })
       .catch((err) => {
