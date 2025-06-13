@@ -27,10 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const specialsList = document.getElementById('specials-list');
 
   if (specialsTitle && specialsList) {
-    // Fetch the specials list from the assets folder. Using a relative
-    // path ensures this works regardless of where the site is hosted.
-    fetch('./assets/specials.txt')
-      .then((response) => response.text())
+    // Fetch the specials list from the assets folder
+    fetch('assets/specials.txt')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
       .then((text) => {
         const lines = text.trim().split('\n');
         if (lines.length > 0) {
@@ -44,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch((err) => {
         console.error('Error loading specials:', err);
+        specialsTitle.textContent = 'Specials Unavailable';
       });
   }
 });

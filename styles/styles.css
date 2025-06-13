@@ -322,13 +322,15 @@ form button {
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 100;
   }
 
   .overlay-menu.open {
     opacity: 1;
     visibility: visible;
+    transform: translateX(0);
   }
 
   .overlay-menu a {
@@ -350,6 +352,11 @@ form button {
     right: 1em;
     font-size: 2em;
     cursor: pointer;
+  }
+
+  .overlay-logo {
+    width: 200px;
+    margin-bottom: 1.5em;
   }
 
   .menu-header h1 {
