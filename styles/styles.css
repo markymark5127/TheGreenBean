@@ -123,7 +123,21 @@ nav a {
   width: 300px;
   height: auto;
   display: block;
-  margin-left: auto;
+}
+
+.roaster-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.roaster-list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.roaster-list li {
+  margin-bottom: 0.5em;
 }
 
 .products-contact {
@@ -155,6 +169,13 @@ nav a {
 .bags img {
   height: 180px;
   border-radius: 4px;
+}
+
+.coffee-bag-img {
+  height: 180px;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 1em;
 }
 
 .menu-header {
