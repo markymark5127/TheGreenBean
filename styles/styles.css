@@ -134,6 +134,10 @@ nav a {
   flex: 1;
 }
 
+.roaster-info {
+  flex: 1;
+}
+
 .column h2 {
   font-size: 1.5em;
   margin-bottom: 1em;
@@ -161,14 +165,6 @@ nav a {
   margin-left: auto;
 }
 
-.roaster-list {
-  margin: 0;
-  padding-left: 1.2em;
-}
-
-.roaster-list li {
-  margin-bottom: 0.5em;
-}
 
 .products-contact {
   display: flex;
@@ -512,7 +508,9 @@ form button {
 }
 
 .product img {
-  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
   border-radius: 4px;
 }
 
