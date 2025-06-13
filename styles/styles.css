@@ -42,6 +42,10 @@ nav {
   display: flex;
 }
 
+.overlay-menu {
+  display: none;
+}
+
 nav a {
   margin-left: 1.5em;
   text-decoration: none;
@@ -284,5 +288,49 @@ form button {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+  }
+
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(246, 240, 231, 0.95);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+  }
+
+  .overlay-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .overlay-menu a {
+    color: #1b3c2b;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin: 0.6em 0;
+    transition: transform 0.2s, color 0.2s;
+  }
+
+  .overlay-menu a:hover {
+    color: #265e36;
+    transform: translateY(-3px);
+  }
+
+  .overlay-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 2em;
+    cursor: pointer;
   }
 }
