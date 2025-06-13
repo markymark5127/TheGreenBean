@@ -23,8 +23,11 @@
       <a href="shop.html">SHOP</a>
       <a href="menu.html">MENU</a>
       <a href="contact.html">CONTACT</a>
-      <a href="#" onclick="showCart()">Cart (<span id="cart-count">0</span>)</a>
     </nav>
+    <a href="#" class="cart-link" onclick="showCart()">
+      <span class="cart-icon">&#128722;</span>
+      <span class="cart-count">0</span>
+    </a>
   </header>
   <div id="mobile-menu" class="overlay-menu">
     <div class="overlay-close">&times;</div>
@@ -34,6 +37,10 @@
     <a href="shop.html">SHOP</a>
     <a href="menu.html">MENU</a>
     <a href="contact.html">CONTACT</a>
+    <a href="#" class="cart-link" onclick="showCart()">
+      <span class="cart-icon">&#128722;</span>
+      <span class="cart-count">0</span>
+    </a>
   </div>
 
   <main class="shop-main">
