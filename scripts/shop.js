@@ -11,10 +11,9 @@ function addToCart(name, price, id) {
 }
 
 function updateCartCount() {
-  const countEl = document.getElementById('cart-count');
-  if (countEl) {
-    countEl.textContent = cart.length;
-  }
+  document.querySelectorAll('.cart-count').forEach((el) => {
+    el.textContent = cart.length;
+  });
 }
 
 function showCart() {
