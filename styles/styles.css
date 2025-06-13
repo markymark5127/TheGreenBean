@@ -293,6 +293,16 @@ nav a {
   font-weight: 500;
 }
 
+.menu-size-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 2px solid #e6dac2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 .footer {
   background-color: #f6f0e7;
   border-top: 2px solid #ddd;
