@@ -172,22 +172,23 @@ nav a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #265e36;
+  width: 32px;
+  height: 32px;
+  background-color: #1b3c2b;
   color: #fff;
   border-radius: 50%;
   text-decoration: none;
   transition: background-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .contact-links .contact-icon:hover {
-  background-color: #1b3c2b;
+  background-color: #265e36;
 }
 
 .contact-links svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 .map-container iframe {
@@ -479,11 +480,13 @@ form button {
 .product select {
   margin-top: 0.2rem;
   padding: 0.4em 2em 0.4em 0.4em;
-  border: 1px solid #ccc;
+  border: 1px solid #1b3c2b;
   border-radius: 4px;
   font-size: 0.9em;
+  color: #1b3c2b;
   cursor: pointer;
   background-color: #fdfdfd;
+  accent-color: #1b3c2b;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -555,6 +558,9 @@ form button {
   font-size: 1.4em;
   cursor: pointer;
   line-height: 1;
+  color: #1b3c2b;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .cart-link {
