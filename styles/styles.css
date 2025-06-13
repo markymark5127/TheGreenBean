@@ -416,6 +416,12 @@ form button {
     width: 60%;
   }
 
+  /* Center the roaster image within its container on small screens */
+  .roaster-container .roaster-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .overlay-menu {
     position: fixed;
     top: 0;
