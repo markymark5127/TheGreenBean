@@ -14,9 +14,27 @@ body {
   border-bottom: 2px solid #ddd;
 }
 
+/*.logo {*/
+/*  font-size: 1.5em;*/
+/*  font-weight: bold;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  gap: 0.5em;*/
+/*}*/
+/**/
+/*.logo img {*/
+/*  height: 24px;*/
+/*  width: 24px;*/
+/*}*/
+
 .logo {
-  font-size: 1.5em;
-  font-weight: bold;
+  height: 40px;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  display: block;
 }
 
 nav a {
@@ -27,25 +45,29 @@ nav a {
 }
 
 .hero {
-  background: url('hero.jpg') no-repeat center center/cover;
+  background: url('../assets/Background.PNG') no-repeat center center/cover;
   color: white;
-  padding: 6em 2em;
-  text-align: left;
+  padding: 8em 2em 10em;
   position: relative;
+  text-align: left;
+}
+
+.hero-text {
+  max-width: 500px;
 }
 
 .hero-text h1 {
-  font-size: 3em;
+  font-size: 3.2em;
   font-weight: bold;
-  margin-bottom: 1em;
   line-height: 1.2;
+  margin-bottom: 1em;
 }
 
 .shop-button {
   background-color: #265e36;
   color: white;
-  padding: 0.8em 2em;
-  font-size: 1em;
+  padding: 0.9em 2em;
+  font-size: 1.1em;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -53,12 +75,15 @@ nav a {
 
 .info-section {
   display: flex;
+  flex-wrap: wrap;
   padding: 4em 2em;
   gap: 3em;
+  background-color: #f6f0e7;
 }
 
 .column {
   flex: 1;
+  min-width: 280px;
 }
 
 .column h2 {
@@ -66,15 +91,28 @@ nav a {
   margin-bottom: 1em;
 }
 
+.column p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.roaster-img {
+  margin-top: 2em;
+  max-width: 100%;
+  height: auto;
+}
+
 .products-contact {
   display: flex;
+  flex-wrap: wrap;
   padding: 4em 2em;
   gap: 3em;
-  align-items: flex-start;
+  background-color: #f6f0e7;
 }
 
 .products, .contact {
   flex: 1;
+  min-width: 280px;
 }
 
 .products h2, .contact h2 {
@@ -90,6 +128,7 @@ nav a {
 
 .bags img {
   height: 180px;
+  border-radius: 4px;
 }
 
 .send-button {
