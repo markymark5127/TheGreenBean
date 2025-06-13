@@ -49,7 +49,7 @@ function showCart() {
     const btn = document.createElement("button");
     btn.className = "remove-btn";
     btn.innerHTML =
-      '<svg class="trash-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6zm5-3h8v3H8V3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      '<svg class="trash-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22m-5 0V5a2 2 0 00-2-2H8a2 2 0 00-2 2v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     btn.addEventListener("click", () => removeFromCart(idx));
     li.appendChild(wrap);
     li.appendChild(btn);
