@@ -160,8 +160,34 @@ nav a {
   margin: 0 auto;
 }
 
-.contact-phone {
+
+/* Contact icons container */
+.contact-links {
+  display: flex;
+  gap: 1em;
   margin-bottom: 1em;
+}
+
+.contact-links .contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #265e36;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.contact-links .contact-icon:hover {
+  background-color: #1b3c2b;
+}
+
+.contact-links svg {
+  width: 20px;
+  height: 20px;
 }
 
 .map-container iframe {
@@ -351,6 +377,7 @@ form button {
     right: 0;
     bottom: 0;
     background: rgba(246, 240, 231, 0.95);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     display: flex;
     flex-direction: column;
@@ -451,12 +478,19 @@ form button {
 
 .product select {
   margin-top: 0.2rem;
-  padding: 0.4em;
+  padding: 0.4em 2em 0.4em 0.4em;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 0.9em;
   cursor: pointer;
   background-color: #fdfdfd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%231b3c2b' stroke-width='2' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6em center;
+  background-size: 10px 6px;
 }
 
 .product button {
