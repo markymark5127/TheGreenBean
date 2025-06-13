@@ -1,186 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shop - The Green Bean</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="stylesheet" href="styles/styles.css" />
-  <script defer src="scripts/main.js"></script>
-  <script defer src="scripts/shop.js"></script>
-</head>
-<body>
-  <header class="top-bar">
-    <div class="left-section">
-      <div class="hamburger">&#9776;</div>
-      <div class="logo">
-        <img src="assets/TheGreenBeanLogoHorizontal.png" alt="Green Bean Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - The Green Bean</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/shop.js"></script>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="left-section">
+        <div class="hamburger">&#9776;</div>
+        <div class="logo">
+          <img
+            src="assets/TheGreenBeanLogoHorizontal.png"
+            alt="Green Bean Logo"
+          />
+        </div>
       </div>
-    </div>
-    <div class="right-section">
-      <nav>
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="shop.html">SHOP</a>
-        <a href="menu.html">MENU</a>
-        <a href="contact.html">CONTACT</a>
-      </nav>
+      <div class="right-section">
+        <nav>
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="shop.html">SHOP</a>
+          <a href="menu.html">MENU</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+        <a href="#" class="cart-link" onclick="showCart()">
+          <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M3 3h2l.6 3h15l-1.2 6H7.2"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle cx="9" cy="19" r="2" />
+            <circle cx="17" cy="19" r="2" />
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+    <div id="mobile-menu" class="overlay-menu">
+      <div class="overlay-close">&times;</div>
+      <img
+        src="assets/TheGreenBeanLogoHorizontal.png"
+        alt="Green Bean Logo"
+        class="overlay-logo"
+      />
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="menu.html">MENU</a>
+      <a href="contact.html">CONTACT</a>
       <a href="#" class="cart-link" onclick="showCart()">
         <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 3h2l.6 3h15l-1.2 6H7.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="9" cy="19" r="2"/>
-          <circle cx="17" cy="19" r="2"/>
+          <path
+            d="M3 3h2l.6 3h15l-1.2 6H7.2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <circle cx="9" cy="19" r="2" />
+          <circle cx="17" cy="19" r="2" />
         </svg>
         <span class="cart-count">0</span>
       </a>
     </div>
-  </header>
-  <div id="mobile-menu" class="overlay-menu">
-    <div class="overlay-close">&times;</div>
-    <img src="assets/TheGreenBeanLogoHorizontal.png" alt="Green Bean Logo" class="overlay-logo" />
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT</a>
-    <a href="shop.html">SHOP</a>
-    <a href="menu.html">MENU</a>
-    <a href="contact.html">CONTACT</a>
-    <a href="#" class="cart-link" onclick="showCart()">
-      <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M3 3h2l.6 3h15l-1.2 6H7.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="9" cy="19" r="2"/>
-        <circle cx="17" cy="19" r="2"/>
-      </svg>
-      <span class="cart-count">0</span>
-    </a>
-  </div>
 
-  <main class="shop-main">
-    <div class="product-list">
-      <div class="product">
-        <img src="assets/LogoShirt.png" alt="Logo Shirt">
-        <h2>Logo Shirt</h2>
-        <p>$20.00</p>
-        <label>Color:
-          <select id="logo-shirt-color">
-            <option value="Green">Green</option>
-            <option value="Black">Black</option>
-            <option value="White">White</option>
-          </select>
-        </label>
-        <label>Size:
-          <select id="logo-shirt-size">
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-        </label>
-        <button onclick="addToCart('Logo Shirt', 20.00, 'logo-shirt')">Add to Cart</button>
-      </div>
+    <main class="shop-main">
+      <div class="product-list">
+        <div class="product">
+          <img src="assets/LogoShirtGreen.png" alt="Logo Shirt" />
+          <h2>Logo Shirt</h2>
+          <p>$20.00</p>
+          <label
+            >Color:
+            <select id="logo-shirt-color">
+              <option value="Green">Green</option>
+              <option value="Black">Black</option>
+              <option value="Gray">Gray</option>
+              <option value="White">White</option>
+            </select>
+          </label>
+          <label
+            >Size:
+            <select id="logo-shirt-size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </label>
+          <button onclick="addToCart('Logo Shirt', 20.00, 'logo-shirt')">
+            Add to Cart
+          </button>
+        </div>
 
-      <div class="product">
-        <img src="assets/ModernShirt.png" alt="Modern Shirt">
-        <h2>Modern Shirt</h2>
-        <p>$22.00</p>
-        <label>Color:
-          <select id="modern-shirt-color">
-            <option value="Green">Green</option>
-            <option value="Black">Black</option>
-            <option value="White">White</option>
-          </select>
-        </label>
-        <label>Size:
-          <select id="modern-shirt-size">
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-        </label>
-        <button onclick="addToCart('Modern Shirt', 22.00, 'modern-shirt')">Add to Cart</button>
-      </div>
+        <div class="product">
+          <img src="assets/ModernShirtGreen.png" alt="Modern Shirt" />
+          <h2>Modern Shirt</h2>
+          <p>$22.00</p>
+          <label
+            >Color:
+            <select id="modern-shirt-color">
+              <option value="Green">Green</option>
+              <option value="Black">Black</option>
+              <option value="Gray">Gray</option>
+              <option value="White">White</option>
+            </select>
+          </label>
+          <label
+            >Size:
+            <select id="modern-shirt-size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </label>
+          <button onclick="addToCart('Modern Shirt', 22.00, 'modern-shirt')">
+            Add to Cart
+          </button>
+        </div>
 
-      <div class="product">
-        <img src="assets/ModernTumbler.png" alt="Modern Tumbler">
-        <h2>Modern Tumbler</h2>
-        <p>$15.00</p>
-        <label>Color:
-          <select id="modern-tumbler-color">
-            <option value="Green">Green</option>
-            <option value="Black">Black</option>
-            <option value="White">White</option>
-          </select>
-        </label>
-        <label>Size:
-          <select id="modern-tumbler-size">
-            <option value="12oz">12oz</option>
-            <option value="16oz">16oz</option>
-          </select>
-        </label>
-        <button onclick="addToCart('Modern Tumbler', 15.00, 'modern-tumbler')">Add to Cart</button>
-      </div>
+        <div class="product">
+          <img src="assets/ModernTumblerGreen.png" alt="Modern Tumbler" />
+          <h2>Modern Tumbler</h2>
+          <p>$15.00</p>
+          <label
+            >Color:
+            <select id="modern-tumbler-color">
+              <option value="Green">Green</option>
+              <option value="Black">Black</option>
+              <option value="Silver">Silver</option>
+            </select>
+          </label>
+          <label
+            >Size:
+            <select id="modern-tumbler-size">
+              <option value="12oz">12oz</option>
+              <option value="16oz">16oz</option>
+            </select>
+          </label>
+          <button
+            onclick="addToCart('Modern Tumbler', 15.00, 'modern-tumbler')"
+          >
+            Add to Cart
+          </button>
+        </div>
 
-      <div class="product">
-        <img src="assets/LogoTumbler.png" alt="Logo Tumbler">
-        <h2>Logo Tumbler</h2>
-        <p>$15.00</p>
-        <label>Color:
-          <select id="logo-tumbler-color">
-            <option value="Green">Green</option>
-            <option value="Black">Black</option>
-            <option value="White">White</option>
-          </select>
-        </label>
-        <label>Size:
-          <select id="logo-tumbler-size">
-            <option value="12oz">12oz</option>
-            <option value="16oz">16oz</option>
-          </select>
-        </label>
-        <button onclick="addToCart('Logo Tumbler', 15.00, 'logo-tumbler')">Add to Cart</button>
-      </div>
+        <div class="product">
+          <img src="assets/LogoTumblerGreen.png" alt="Logo Tumbler" />
+          <h2>Logo Tumbler</h2>
+          <p>$15.00</p>
+          <label
+            >Color:
+            <select id="logo-tumbler-color">
+              <option value="Green">Green</option>
+              <option value="Black">Black</option>
+              <option value="Silver">Silver</option>
+            </select>
+          </label>
+          <label
+            >Size:
+            <select id="logo-tumbler-size">
+              <option value="12oz">12oz</option>
+              <option value="16oz">16oz</option>
+            </select>
+          </label>
+          <button onclick="addToCart('Logo Tumbler', 15.00, 'logo-tumbler')">
+            Add to Cart
+          </button>
+        </div>
 
-      <div class="product">
-        <img src="assets/CoffeeBag.png" alt="Coffee Bag">
-        <h2>Coffee Bag</h2>
-        <p>$14.00</p>
-        <label>Type:
-          <select id="coffee-bag-color">
-            <option value="House Blend">House Blend</option>
-            <option value="Brazil">Brazil</option>
-            <option value="Ethiopia">Ethiopia</option>
-          </select>
-        </label>
-        <label>Size:
-          <select id="coffee-bag-size">
-            <option value="12oz">12oz</option>
-            <option value="1lb">1lb</option>
-          </select>
-        </label>
-        <button onclick="addToCart('Coffee Bag', 14.00, 'coffee-bag')">Add to Cart</button>
+        <div class="product">
+          <img src="assets/CoffeeBag.png" alt="Coffee Bag" />
+          <h2>Coffee Bag</h2>
+          <p>$14.00</p>
+          <label
+            >Type:
+            <select id="coffee-bag-color">
+              <option value="House Blend">House Blend</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Ethiopia">Ethiopia</option>
+            </select>
+          </label>
+          <label
+            >Size:
+            <select id="coffee-bag-size">
+              <option value="12oz">12oz</option>
+              <option value="1lb">1lb</option>
+            </select>
+          </label>
+          <button onclick="addToCart('Coffee Bag', 14.00, 'coffee-bag')">
+            Add to Cart
+          </button>
+        </div>
       </div>
+    </main>
+
+    <div id="cart-modal" class="cart-modal">
+      <button class="cart-close" onclick="closeCart()">&times;</button>
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p class="cart-total">
+        <strong>Total:</strong> $<span id="cart-total">0.00</span>
+      </p>
+      <form
+        id="paypal-form"
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_blank"
+      >
+        <input type="hidden" name="cmd" value="_xclick" />
+        <input
+          type="hidden"
+          name="business"
+          value="your-paypal-email@example.com"
+        />
+        <input
+          type="hidden"
+          name="item_name"
+          value="Green Bean Cart Purchase"
+        />
+        <input type="hidden" name="amount" value="0.00" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input
+          type="submit"
+          value="Checkout with PayPal"
+          class="paypal-button"
+        />
+      </form>
     </div>
-  </main>
 
-  <div id="cart-modal" class="cart-modal">
-    <button class="cart-close" onclick="closeCart()">&times;</button>
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <p class="cart-total"><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
-    <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="your-paypal-email@example.com">
-      <input type="hidden" name="item_name" value="Green Bean Cart Purchase">
-      <input type="hidden" name="amount" value="0.00">
-      <input type="hidden" name="currency_code" value="USD">
-      <input type="submit" value="Checkout with PayPal" class="paypal-button">
-    </form>
-  </div>
-
-  <footer class="footer">
-    <p><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=100+S+Beaver+St,+York,+PA,+United+States,+17401">100 S Beaver St, York, PA, United States, 17401</a></p>
-    <p><strong>Phone:</strong> <a href="tel:7178484070">(717) 848-4070</a></p>
-    <p><strong>Email:</strong> <a href="mailto:coffee.gbrc@gmail.com">coffee.gbrc@gmail.com</a></p>
-    <p><strong>Studied at:</strong> York College of Pennsylvania</p>
-  </footer>
-</body>
+    <footer class="footer">
+      <p>
+        <strong>Address:</strong>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=100+S+Beaver+St,+York,+PA,+United+States,+17401"
+          >100 S Beaver St, York, PA, United States, 17401</a
+        >
+      </p>
+      <p><strong>Phone:</strong> <a href="tel:7178484070">(717) 848-4070</a></p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:coffee.gbrc@gmail.com">coffee.gbrc@gmail.com</a>
+      </p>
+      <p><strong>Studied at:</strong> York College of Pennsylvania</p>
+    </footer>
+  </body>
 </html>
