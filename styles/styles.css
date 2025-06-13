@@ -108,25 +108,30 @@ nav a {
   background-color: #f6f0e7;
 }
 
-.column {
+.left-info,
+.roasting {
   flex: 1;
   min-width: 280px;
 }
 
-/* Specific column ordering for home page */
-.story {
-  order: 1;
-  flex-basis: 100%;
+.left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.column {
+  flex: 1;
 }
 
 .products {
-  order: 2;
-  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
 }
 
-.roasting {
-  order: 3;
-  flex-basis: 50%;
+.products-content {
+  flex: 1;
 }
 
 .column h2 {
@@ -152,6 +157,10 @@ nav a {
   gap: 2em;
 }
 
+.roaster-container .roaster-img {
+  margin-left: auto;
+}
+
 .roaster-list {
   margin: 0;
   padding-left: 1.2em;
@@ -164,6 +173,7 @@ nav a {
 .products-contact {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 4em 2em;
   gap: 3em;
   background-color: #f6f0e7;
@@ -230,7 +240,8 @@ nav a {
 }
 
 .coffee-bag-img {
-  height: 220px;
+  width: 240px;
+  height: auto;
   border-radius: 4px;
   display: block;
   margin-bottom: 1em;
@@ -366,6 +377,26 @@ form button {
 
   .hero-text h1 {
     font-size: 2.2em;
+  }
+
+  .info-section {
+    flex-direction: column;
+  }
+
+  .products {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .coffee-bag-img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .roaster-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .menu-hero {
