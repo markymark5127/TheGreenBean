@@ -328,6 +328,10 @@ nav a {
   text-decoration: none;
 }
 
+.hours {
+  margin-top: 0.5em;
+}
+
 .send-button {
   background-color: #265e36;
   color: white;
