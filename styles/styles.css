@@ -284,17 +284,26 @@ nav a {
 
 .menu-section li {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   padding: 12px 0;
   border-bottom: 1px solid #e6dac2;
   font-size: 1.1rem;
   font-weight: 500;
 }
 
+/* Align menu item columns with the size labels */
+.menu-section li span:first-child {
+  flex: 2;
+}
+
+.menu-section li span:not(:first-child) {
+  flex: 1;
+  text-align: center;
+}
+
 
 .menu-section-header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
   border-bottom: 2px solid #e6dac2;
   padding-bottom: 10px;
@@ -302,6 +311,7 @@ nav a {
 }
 
 .menu-section-header h2 {
+  flex: 2;
   margin: 0;
   font-size: 1.5rem;
   color: #0f3d2e;
@@ -309,9 +319,14 @@ nav a {
 
 .size-labels {
   display: flex;
-  gap: 1.5em;
+  flex: 3;
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+.size-labels span {
+  flex: 1;
+  text-align: center;
 }
 
 .footer {
