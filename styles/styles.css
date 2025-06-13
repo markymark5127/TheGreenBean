@@ -98,7 +98,8 @@ nav a {
 
 .roaster-img {
   margin-top: 2em;
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
 }
 
@@ -113,6 +114,8 @@ nav a {
 .products, .contact {
   flex: 1;
   min-width: 280px;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .products h2, .contact h2 {
