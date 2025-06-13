@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   background: #f6f0e7;
   color: #1b3c2b;
 }
@@ -59,7 +59,7 @@ nav a {
 }
 
 .hero {
-  background: url('../assets/Background.PNG') no-repeat center center/cover;
+  background: url("../assets/Background.PNG") no-repeat center center/cover;
   color: white;
   padding: 8em 2em 10em;
   position: relative;
@@ -72,7 +72,7 @@ nav a {
 
 /* Hero section specifically for the menu page */
 .menu-hero {
-  background: url('../assets/Roast.PNG') no-repeat center center/cover;
+  background: url("../assets/Roast.PNG") no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 6em 1em;
@@ -166,7 +166,6 @@ nav a {
   margin-left: 0;
 }
 
-
 .products-contact {
   display: flex;
   flex-wrap: wrap;
@@ -176,13 +175,13 @@ nav a {
   background-color: #f6f0e7;
 }
 
-.products, .contact {
+.products,
+.contact {
   flex: 1;
   min-width: 280px;
   max-width: 480px;
   margin: 0 auto;
 }
-
 
 /* Contact icons container */
 .contact-links {
@@ -220,7 +219,8 @@ nav a {
   border: 0;
 }
 
-.products h2, .contact h2 {
+.products h2,
+.contact h2 {
   font-size: 1.5em;
   margin-bottom: 1em;
 }
@@ -323,7 +323,8 @@ form {
   gap: 1em;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.8em;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -431,7 +432,9 @@ form button {
     opacity: 0;
     visibility: hidden;
     transform: translateX(-100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
     z-index: 100;
   }
 
@@ -446,7 +449,9 @@ form button {
     font-size: 1.5em;
     text-decoration: none;
     margin: 0.6em 0;
-    transition: transform 0.2s, color 0.2s;
+    transition:
+      transform 0.2s,
+      color 0.2s;
   }
 
   .overlay-menu a:hover {
@@ -500,7 +505,9 @@ form button {
   width: 220px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .product:hover {
@@ -574,7 +581,9 @@ form button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .cart-modal.open {
@@ -596,6 +605,17 @@ form button {
   align-items: center;
   border-bottom: 1px solid #eee;
   padding: 0.5em 0;
+}
+.cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.cart-item-info img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .remove-btn {
