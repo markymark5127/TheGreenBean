@@ -88,6 +88,14 @@
     <h2>Your Cart</h2>
     <ul id="cart-items"></ul>
     <p class="cart-total"><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+    <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="your-paypal-email@example.com">
+      <input type="hidden" name="item_name" value="Green Bean Cart Purchase">
+      <input type="hidden" name="amount" value="0.00">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="submit" value="Checkout with PayPal" class="paypal-button">
+    </form>
   </div>
 
   <footer class="footer">

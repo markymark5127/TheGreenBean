@@ -20,6 +20,7 @@ function showCart() {
   const modal = document.getElementById('cart-modal');
   const list = document.getElementById('cart-items');
   const total = document.getElementById('cart-total');
+  const paypalAmount = document.querySelector('#paypal-form input[name="amount"]');
 
   list.innerHTML = '';
   let sum = 0;
@@ -35,6 +36,9 @@ function showCart() {
   });
 
   total.textContent = sum.toFixed(2);
+  if (paypalAmount) {
+    paypalAmount.value = sum.toFixed(2);
+  }
   modal.classList.add('open');
 }
 
