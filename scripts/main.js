@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const specialsList = document.getElementById('specials-list');
 
   if (specialsTitle && specialsList) {
-    fetch('assets/specials.txt')
+    // Fetch the specials list from the assets folder. Using a relative
+    // path ensures this works regardless of where the site is hosted.
+    fetch('./assets/specials.txt')
       .then((response) => response.text())
       .then((text) => {
         const lines = text.trim().split('\n');
