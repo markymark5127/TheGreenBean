@@ -7,6 +7,7 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="styles/styles.css" />
   <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/shop.js"></script>
 </head>
 <body>
   <header class="top-bar">
@@ -22,6 +23,7 @@
       <a href="shop.html">SHOP</a>
       <a href="menu.html">MENU</a>
       <a href="contact.html">CONTACT</a>
+      <a href="#" onclick="showCart()">Cart (<span id="cart-count">0</span>)</a>
     </nav>
   </header>
   <div id="mobile-menu" class="overlay-menu">
@@ -34,16 +36,120 @@
     <a href="contact.html">CONTACT</a>
   </div>
 
-  <section class="info-section">
-    <div class="column">
-      <h2>OUR COFFEES</h2>
-      <div class="bags">
-        <img src="https://i.imgur.com/UyifwZo.png" alt="Brazil Coffee Bag"/>
-        <img src="https://i.imgur.com/9ZVrDK2.png" alt="Ethiopia Coffee Bag"/>
-        <img src="https://i.imgur.com/KW19TrE.png" alt="House Blend Coffee Bag"/>
+  <main class="shop-main">
+    <div class="product-list">
+      <div class="product">
+        <img src="assets/LogoShirt.png" alt="Logo Shirt">
+        <h2>Logo Shirt</h2>
+        <p>$20.00</p>
+        <label>Color:
+          <select id="logo-shirt-color">
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+          </select>
+        </label>
+        <label>Size:
+          <select id="logo-shirt-size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </label>
+        <button onclick="addToCart('Logo Shirt', 20.00, 'logo-shirt')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="assets/ModernShirt.png" alt="Modern Shirt">
+        <h2>Modern Shirt</h2>
+        <p>$22.00</p>
+        <label>Color:
+          <select id="modern-shirt-color">
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+          </select>
+        </label>
+        <label>Size:
+          <select id="modern-shirt-size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </label>
+        <button onclick="addToCart('Modern Shirt', 22.00, 'modern-shirt')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="assets/ModernTumbler.png" alt="Modern Tumbler">
+        <h2>Modern Tumbler</h2>
+        <p>$15.00</p>
+        <label>Color:
+          <select id="modern-tumbler-color">
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+          </select>
+        </label>
+        <label>Size:
+          <select id="modern-tumbler-size">
+            <option value="12oz">12oz</option>
+            <option value="16oz">16oz</option>
+          </select>
+        </label>
+        <button onclick="addToCart('Modern Tumbler', 15.00, 'modern-tumbler')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="assets/LogoTumbler.png" alt="Logo Tumbler">
+        <h2>Logo Tumbler</h2>
+        <p>$15.00</p>
+        <label>Color:
+          <select id="logo-tumbler-color">
+            <option value="Green">Green</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+          </select>
+        </label>
+        <label>Size:
+          <select id="logo-tumbler-size">
+            <option value="12oz">12oz</option>
+            <option value="16oz">16oz</option>
+          </select>
+        </label>
+        <button onclick="addToCart('Logo Tumbler', 15.00, 'logo-tumbler')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="assets/CoffeeBag.png" alt="Coffee Bag">
+        <h2>Coffee Bag</h2>
+        <p>$14.00</p>
+        <label>Type:
+          <select id="coffee-bag-color">
+            <option value="House Blend">House Blend</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Ethiopia">Ethiopia</option>
+          </select>
+        </label>
+        <label>Size:
+          <select id="coffee-bag-size">
+            <option value="12oz">12oz</option>
+            <option value="1lb">1lb</option>
+          </select>
+        </label>
+        <button onclick="addToCart('Coffee Bag', 14.00, 'coffee-bag')">Add to Cart</button>
       </div>
     </div>
-  </section>
+  </main>
+
+  <div id="cart-modal" class="cart-modal hidden">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+    <button onclick="closeCart()">Close</button>
+  </div>
 
   <footer class="footer">
     <p><strong>Address:</strong> 100 S Beaver St, York, PA, United States, 17401</p>
@@ -51,6 +157,5 @@
     <p><strong>Email:</strong> <a href="mailto:coffee.gbrc@gmail.com">coffee.gbrc@gmail.com</a></p>
     <p><strong>Studied at:</strong> York College of Pennsylvania</p>
   </footer>
-  
 </body>
 </html>
