@@ -35,11 +35,11 @@ function showCart() {
   });
 
   total.textContent = sum.toFixed(2);
-  modal.classList.remove('hidden');
+  modal.classList.add('open');
 }
 
 function closeCart() {
-  document.getElementById('cart-modal').classList.add('hidden');
+  document.getElementById('cart-modal').classList.remove('open');
 }
 
 updateCartCount();

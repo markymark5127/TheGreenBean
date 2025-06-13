@@ -17,17 +17,23 @@
         <img src="assets/TheGreenBeanLogoHorizontal.png" alt="Green Bean Logo">
       </div>
     </div>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="shop.html">SHOP</a>
-      <a href="menu.html">MENU</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <a href="#" class="cart-link" onclick="showCart()">
-      <span class="cart-icon">&#128722;</span>
-      <span class="cart-count">0</span>
-    </a>
+    <div class="right-section">
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="shop.html">SHOP</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <a href="#" class="cart-link" onclick="showCart()">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 3h2l.6 3h15l-1.2 6H7.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="19" r="2"/>
+          <circle cx="17" cy="19" r="2"/>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
   </header>
   <div id="mobile-menu" class="overlay-menu">
     <div class="overlay-close">&times;</div>
@@ -38,7 +44,11 @@
     <a href="menu.html">MENU</a>
     <a href="contact.html">CONTACT</a>
     <a href="#" class="cart-link" onclick="showCart()">
-      <span class="cart-icon">&#128722;</span>
+      <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 3h2l.6 3h15l-1.2 6H7.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="9" cy="19" r="2"/>
+        <circle cx="17" cy="19" r="2"/>
+      </svg>
       <span class="cart-count">0</span>
     </a>
   </div>
@@ -59,11 +69,11 @@
     </div>
   </section>
 
-  <div id="cart-modal" class="cart-modal hidden">
+  <div id="cart-modal" class="cart-modal">
+    <button class="cart-close" onclick="closeCart()">&times;</button>
     <h2>Your Cart</h2>
     <ul id="cart-items"></ul>
-    <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
-    <button onclick="closeCart()">Close</button>
+    <p class="cart-total"><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
   </div>
 
   <footer class="footer">
