@@ -397,6 +397,11 @@ form button {
     align-items: center;
   }
 
+  /* Center menu heading and button on mobile */
+  .roaster-info {
+    text-align: center;
+  }
+
   .menu-hero {
     padding: 4em 1em;
   }
