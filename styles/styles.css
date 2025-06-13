@@ -12,6 +12,19 @@ body {
   padding: 1.2em 2em;
   background-color: #f6f0e7;
   border-bottom: 2px solid #ddd;
+  position: relative;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 /*.logo {*/
@@ -35,6 +48,10 @@ body {
   height: 100%;
   width: auto;
   display: block;
+}
+
+nav {
+  display: flex;
 }
 
 nav a {
@@ -165,4 +182,46 @@ form button {
   border-radius: 6px;
   font-size: 1em;
   cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f6f0e7;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 2px solid #ddd;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    margin: 0.5em 0;
+  }
+
+  .hero {
+    padding: 6em 1em 8em;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2em;
+  }
+
+  .bags {
+    flex-direction: column;
+    align-items: center;
+  }
 }
