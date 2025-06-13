@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (specialsTitle && specialsList) {
     // Fetch the specials list from the assets folder
-    fetch('assets/specials.txt')
+    fetch('./assets/specials.txt')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
