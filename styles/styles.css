@@ -61,6 +61,19 @@ nav a {
   max-width: 500px;
 }
 
+/* Hero section specifically for the menu page */
+.menu-hero {
+  background: url('../assets/Roast.PNG') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 6em 1em;
+}
+
+.menu-hero h1 {
+  font-size: 2.8em;
+  margin: 0;
+}
+
 .hero-text h1 {
   font-size: 3.2em;
   font-weight: bold;
@@ -164,7 +177,11 @@ nav a {
 }
 
 .menu-items li {
-  margin: 0.3em 0;
+  margin: 0.5em 0;
+  padding: 0.6em 1em;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .footer {
@@ -247,6 +264,14 @@ form button {
   }
 
   .hero-text h1 {
+    font-size: 2.2em;
+  }
+
+  .menu-hero {
+    padding: 4em 1em;
+  }
+
+  .menu-hero h1 {
     font-size: 2.2em;
   }
 
